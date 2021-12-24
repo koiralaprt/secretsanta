@@ -20,12 +20,12 @@ jobs:
       - run: echo "Building"
       - run: npm run build
       - run: echo "Installing python and awscli"
-      - run: apt-get install python -y
-      - run: apt-get update -y
-      - run: apt-get install python-pip -y
-      - run: pip install awscli
+      - run: sudo apt-get install python -y
+      - run: sudo apt-get update -y
+      - run: sudo apt-get install python-pip -y
+      - run: sudo pip install awscli
       - run: export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
       - run: export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: aws s3 cp ./build/ s3://${{ secrets.S3_BUCKET }}/ --recursive --include "*"
+      - run: sudo aws s3 cp ./build/ s3://${{ secrets.S3_BUCKET }}/ --recursive --include "*"
       - run: echo "Deployed to S3 website"
 
