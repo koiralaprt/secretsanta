@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Secret Santa",
+  "name": "Secret Santa",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "ico.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

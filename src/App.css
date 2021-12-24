@@ -1,38 +1,49 @@
+@keyframes move {
+  0%   {   background-position: -100% -100%;}
+  33% {background-position: 100% -100%;}
+  66% {   background-position: 100% 100%;}
+  100% {   background-position: -100% 100%;}
+}
 .App {
+  font-family: "Mountains of Christmas", cursive;
+
+  background: #2f7336; /* fallback for old browsers */
+  background: radial-gradient(
+    
+    #aa3a38,
+    #2f7336
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: radial-gradient(
+    
+    #aa3a38,
+    #2f7336
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  animation:move 15s infinite;
+  color: white;
+  background-size:400% 400%;
+}
+
+.santa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buddy {
+  border-radius: 50%;
+}
+
+h1,
+h2,
+h3,
+h4 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
