@@ -6,9 +6,11 @@ export default function App() {
   const [page, setPage] = useState(1);
   return (
     <div className="App santa">
-      {page == 1 && (
+      {page === 1 && (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <img
+            alt="a1"
+
             className="buddy"
             style={{ height: "300px", width: "300px" }}
             src={
@@ -42,7 +44,7 @@ export default function App() {
           </div>
         </div>
       )}
-      {page == 2 && (
+      {page === 2 && (
         <div className="santa">
           <div
             style={{
@@ -57,6 +59,7 @@ export default function App() {
               intend to ,do they?
             </h2>
             <img
+            alt="a"
               height="200"
               width="210"
               className="buddy"
@@ -80,7 +83,7 @@ export default function App() {
           </div>
         </div>
       )}
-      {page == 3 && (
+      {page === 3 && (
         <div className="santa">
           
           <h1 style={{ textAlign: "center" }}>
@@ -102,7 +105,9 @@ export default function App() {
             <br />
             to collect your gift.
             <br/>
-          <img src="/fire.gif" />
+          <img src="/fire.gif" 
+            alt="ab"
+            />
 
           </h1>
         </div>
@@ -117,7 +122,9 @@ export default function App() {
       >
         <span onClick={() => setPage(1)}>Detour</span>
       </div>
-      <img src="/grinch.png" style={{position:"absolute",left:0,bottom:0,height:'200px'}}/>
+      <img src="/grinch.png" style={{position:"absolute",left:0,bottom:0,height:'200px'}}
+            alt="abc"
+            />
     </div>
   );
 }
