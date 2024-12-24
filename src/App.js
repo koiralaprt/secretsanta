@@ -1,7 +1,9 @@
 import { useState } from "react";
-import data from './config.json'
+import data from "./config.json";
 import "./App.css";
-
+function isMobile() {
+  return window.innerWidth <= 768; // Typical breakpoint for mobile devices
+}
 export default function App() {
   const [page, setPage] = useState(1);
   return (
@@ -10,7 +12,6 @@ export default function App() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <img
             alt="a1"
-
             className="buddy"
             style={{ height: "300px", width: "300px" }}
             src={
@@ -22,7 +23,7 @@ export default function App() {
               color: "white",
               display: "flex",
               alignItems: "center",
-              flexDirection: "column"
+              flexDirection: "column",
             }}
           >
             <h2>
@@ -36,7 +37,7 @@ export default function App() {
                 height: "100px",
                 width: "100px",
                 background: "red",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
             >
               Click Me
@@ -51,7 +52,7 @@ export default function App() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "20px"
+              padding: "20px",
             }}
           >
             <h2>
@@ -59,7 +60,7 @@ export default function App() {
               intend to ,do they?
             </h2>
             <img
-            alt="a"
+              alt="a"
               height="200"
               width="210"
               className="buddy"
@@ -75,7 +76,7 @@ export default function App() {
                 height: "100px",
                 width: "100px",
                 background: "red",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
             >
               I'm real
@@ -85,18 +86,16 @@ export default function App() {
       )}
       {page === 3 && (
         <div className="santa">
-          
           <h2 style={{ textAlign: "center" }}>
             Find <br />
-           <span style={{fontSize:'2em'}}>{data.user} </span>
-            <br /> and tell them the password <br />{" "}
-            <br />
+            <span style={{ fontSize: "2em" }}>{data.user} </span>
+            <br /> and tell them the password <br /> <br />
             <code
               style={{
                 background: "purple",
                 borderRadius: "20px",
                 padding: "10px",
-                fontSize:'1.2em'
+                fontSize: "1.2em",
               }}
             >
               {data.password}
@@ -104,11 +103,8 @@ export default function App() {
             <br />
             <br />
             to collect your gift.
-            <br/>
-          <img src="/fire.gif" 
-            alt="ab"
-            />
-
+            <br />
+            <img src="/fire.gif" alt="ab" />
           </h2>
         </div>
       )}
@@ -117,14 +113,21 @@ export default function App() {
           position: "absolute",
           bottom: "10px",
           right: "10px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         <span onClick={() => setPage(1)}>Detour</span>
       </div>
-      <img src="/grinch.png" style={{position:"absolute",left:0,bottom:0,height:'200px'}}
-            alt="abc"
-            />
+      <img
+        src="/grinch.png"
+        style={{
+          position: "absolute",
+          left: 0,
+          bottom: 0,
+          height: isMobile() ? "90px" : "200px",
+        }}
+        alt="abc"
+      />
     </div>
   );
 }
