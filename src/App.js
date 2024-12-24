@@ -27,7 +27,7 @@ export default function App() {
             }}
           >
             <h2>
-              <i>Merry Christmas fellow Laudian!</i>
+              <i>Merry Christmas {data.laudian}</i>
             </h2>
             <h4>Click the button to find where your gift is!!</h4>
             <div
