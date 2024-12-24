@@ -86,7 +86,7 @@ export default function App() {
       {page === 3 && (
         <div className="santa">
           
-          <h1 style={{ textAlign: "center" }}>
+          <h2 style={{ textAlign: "center" }}>
             Find <br />
            <span style={{fontSize:'2em'}}>{data.user} </span>
             <br /> and tell them the password <br />{" "}
@@ -96,7 +96,7 @@ export default function App() {
                 background: "purple",
                 borderRadius: "20px",
                 padding: "10px",
-                fontSize:'2em'
+                fontSize:'1.2em'
               }}
             >
               {data.password}
@@ -109,7 +109,7 @@ export default function App() {
             alt="ab"
             />
 
-          </h1>
+          </h2>
         </div>
       )}
       <div
